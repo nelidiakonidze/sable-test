@@ -1,0 +1,60 @@
+{
+  "repTransactions": [
+    {
+      "id": 1,
+      "userId": "6c86fd2",
+      "recipientId": "9cd5hld6",
+      "amount": "$100",
+      "status": "none"
+    },
+    {
+      "id": 2,
+      "userId": "6c86fd2",
+      "recipientId": "9cd5hld6",
+      "amount": "$80",
+      "status": "none"
+    },
+    {
+      "id": 3,
+      "userId": "6c86fd2",
+      "recipientId": "9cd5hld6",
+      "amount": "$900",
+      "status": "none"
+    },
+    {
+      "id": 4,
+      "userId": "6c86fd2",
+      "recipientId": "9cd5hld6",
+      "amount": "$187",
+      "status": "none"
+    },
+    {
+      "id": 5,
+      "userId": "6c86fd2",
+      "recipientId": "9cd5hld6",
+      "amount": "$98",
+      "status": "none"
+    },
+    {
+      "id": 6,
+      "userId": "6c86fd2",
+      "recipientId": "9cd5hld6",
+      "amount": "$170",
+      "status": "none"
+    },
+    {
+      "id": 7,
+      "userId": "6c86fd2",
+      "recipientId": "9cd5hld6",
+      "amount": "$100",
+      "status": "none"
+    },
+    {
+      "id": 8,
+      "userId": "6c86fd2",
+      "recipientId": "9cd5hld6",
+      "amount": "$3400",
+      "status": "none"
+    }
+  ]
+}
