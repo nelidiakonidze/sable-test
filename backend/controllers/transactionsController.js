@@ -1,7 +1,18 @@
 const list = require('../repTransactions.json');
 
+const resolvedTransactionsStatuses = ['blocked', 'allowed'];
+
 const listTransactions = () => {
-  return list.repTransactions;
+  const reportedTransactions = list.repTransactions;
+  const filteredTransactions = reportedTransactions.filter(transaction => {
+    if (resolvedTransactionsStatuses.includes(transaction.status)) {
+      return false;
+    } else {
+      return true;
+    }
+  });
+
+  return filteredTransactions;
 };
 
 const getTransaction = id => {
