@@ -9,7 +9,7 @@ export interface Transaction {
   recipientId: string;
   // TODO: change to number
   amount: string;
-  status?: Status;
+  status: Status;
 }
 
 export enum Status {
