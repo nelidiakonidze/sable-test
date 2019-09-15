@@ -31,26 +31,24 @@ export default class App extends React.Component {
     this.fetchTransactions();
   }
 
-  fetchTransactions = () => {
-    fetch(URLS.transactions)
-      .then(res => res.json())
-      .then(transactions => {
-        this.setState({
-          transactions: transactions,
-        });
-      })
-      .catch(error => console.log(error));
+  fetchTransactions = async () => {
+    const response = await fetch(URLS.transactions);
+    const transactions = await response.json();
+
+    this.setState({
+      transactions,
+    });
   };
 
-  updateTransaction = (id: number, updatedTransaction: Transaction) => {
-    fetch(`${URLS.transactions}/${id}`, {
+  updateTransaction = async (id: number, updatedTransaction: Transaction) => {
+    await fetch(`${URLS.transactions}/${id}`, {
       method: 'PUT',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(updatedTransaction),
     });
   };
 
-  onClickHandler = (id: number, status: Status) => {
+  onClickHandler = async (id: number, status: Status) => {
     console.log(`going to change state of ${id} to ${status}`);
 
     // find the old transaction by comparing the id of with the one clicked
@@ -70,10 +68,10 @@ export default class App extends React.Component {
     };
 
     // updating the transaction in the backend
-    this.updateTransaction(id, updatedTransaction);
+    await this.updateTransaction(id, updatedTransaction);
 
     // fetching the new transactions updated
-    this.fetchTransactions();
+    await this.fetchTransactions();
   };
 
   render() {
